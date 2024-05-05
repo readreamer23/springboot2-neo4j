@@ -10,7 +10,6 @@ import java.util.Set;
 /**
  * 类型转换器
  * 
- * @author lc
  */
 public class Convert
 {

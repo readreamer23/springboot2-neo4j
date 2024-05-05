@@ -22,7 +22,7 @@ API接口：Swagger2
 
 1. 用IDEA导入本项目
 
-2. 修改(resources/application.yml)配置文件，主要修改neo4j连接图库配置
+2. 修改(resources/application.yml)配置文件，主要修改neo4j连接图数据库配置
 
 3. 运行项目 
    3.1. 项目根目录下执行mvn springboot:run 
@@ -31,14 +31,19 @@ API接口：Swagger2
 4. 浏览器访问前端页面： http://localhost:8088/neo4j
 
 5. 新建测试数据
-  neo4j客户端brower命令窗口执行如下命令：
+  1.neo4j客户端brower命令窗口执行如下命令：
    CREATE (a:Person {name: 'Tom Hanks', born: 1956})-[r:ACTED_IN {roles: ['Forrest']}]->(m:Movie {name: 'Forrest Gump',title: 'Forrest Gump', released: 1994})
    CREATE (d:Person {name: 'Robert Zemeckis', born: 1951})-[:DIRECTED]->(m)
    RETURN a, d, r, m
 
+  2.或者请求添加节点接口向neo4j中添加数据
+  http://localhost:8088/neo4j/graph/createNode?domain=movie&name=IronMan
+  
+  
 6.前端页面刷新查看数据
 
 #### 演示图
 1.前端页面
 
 ![image ](doc/neo4j-view-1.png) 
+

@@ -3,7 +3,6 @@ package com.modules.common.utils;
 /**
  * 字符串格式化
  * 
- * @author lc
  */
 public class StrFormatter
 {

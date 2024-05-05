@@ -6,11 +6,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @Slf4j
 @SpringBootApplication
-public class Application {
+public class Neo4jApplication {
 
     public static void main(String[] args) {
-        log.info("启动开始");
-        SpringApplication.run(Application.class, args);
-        log.info("启动成功");
+        log.info("......启动开始");
+        SpringApplication.run(Neo4jApplication.class, args);
+        log.info("......启动成功");
     }
 }
