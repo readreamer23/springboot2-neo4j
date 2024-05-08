@@ -16,8 +16,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * neo4j图库 Repository
  *
+ * 操作neo4j知识图谱Repository 实现类
  * @author lihui
  *
  */
@@ -83,7 +83,6 @@ public class GraphImplRepository implements GraphRepository {
 		HashMap<String, Object> nr = new HashMap<String, Object>();
 		try {
 			String domain = query.getDomain();
-			// MATCH (n:`症状`) -[r]-(m:症状) where r.name='治疗' or r.name='危险因素' return n,m
 			if (!StringUtils.isBlank(domain)) {
 				String cqr = "";
 				List<String> lis = new ArrayList<String>();
@@ -157,7 +156,6 @@ public class GraphImplRepository implements GraphRepository {
 	public HashMap<String, Object> getNodeNameGraph(GraphQuery query) {
 		HashMap<String, Object> nr = new HashMap<String, Object>();
 		try {
-			// MATCH (n) -[r]-(m:症状) where r.name='治疗' or r.name='危险因素' return n,m
 			String cqr = "";
 			List<String> lis = new ArrayList<String>();
 			if (query.getRelation() != null && query.getRelation().length > 0) {

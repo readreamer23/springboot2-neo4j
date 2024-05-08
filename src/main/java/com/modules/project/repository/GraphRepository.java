@@ -9,6 +9,9 @@ import java.util.List;
 import java.util.Map;
 
 
+/**
+ * 操作neo4j知识图谱Repository接口
+ */
 public interface GraphRepository {
 	/**
 	 * 领域标签分页

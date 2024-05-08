@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * neo4j图数据管理
+ * neo4j图数据管理接口
  *
  */
 
